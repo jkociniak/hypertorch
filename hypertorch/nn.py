@@ -185,6 +185,7 @@ class DoubleInputHyperbolicFFN(SemiRiemannianModule):
                  curv,
                  **kwargs):
         super().__init__()
+        curv = torch.tensor(curv)
         input_dims = [input_dim] * 2
         if hidden_dims:
             ffn_input_dim = hidden_dims[0]
